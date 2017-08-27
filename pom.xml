@@ -4,11 +4,11 @@
         xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.services</groupId>
-    <artifactId>tyuu</artifactId>
+    <artifactId>cbhbhello</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
-    <name>tyuu</name>
+    <name>cbhbhello</name>
     <url>http://maven.apache.org</url>
 
     <properties>
@@ -16,7 +16,7 @@
         <cse.version>2.1.4</cse.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <demo.main>com.services.pojo.SpringPojoServer</demo.main>
+        <demo.main>com.services.springmvc.SpringmvcServer</demo.main>
     </properties>
 
     <dependencyManagement>
@@ -34,7 +34,12 @@
     <dependencies>
         <dependency>
             <groupId>io.servicecomb</groupId>
-            <artifactId>provider-pojo</artifactId>
+            <artifactId>provider-springmvc</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.servicecomb</groupId>
+            <artifactId>transport-rest-vertx</artifactId>
         </dependency>
 
         <dependency>
@@ -45,11 +50,6 @@
         <dependency>
             <groupId>io.servicecomb</groupId>
             <artifactId>handler-loadbalance</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>io.servicecomb</groupId>
-            <artifactId>transport-rest-vertx</artifactId>
         </dependency>
 
         <dependency>
@@ -72,12 +72,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-
-        <dependency>
-            <groupId>joda-time</groupId>
-            <artifactId>joda-time</artifactId>
-            <version>2.9.9</version>
-        </dependency>
     </dependencies>
 
     <build>
@@ -99,6 +93,7 @@
                     </execution>
                 </executions>
             </plugin>
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
@@ -119,4 +114,3 @@
         </plugins>
     </build>
 </project>
-

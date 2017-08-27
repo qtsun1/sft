@@ -1,4 +1,4 @@
-APPLICATION_ID: pojotest
+APPLICATION_ID: springmvctest
 service_description:
   name: sft
   version: 0.0.1
